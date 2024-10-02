@@ -4,8 +4,8 @@ Name=Videogame-Navecita
 Type=0
 Ver=2
 ObjFiles=
-Includes=C:\Users\Leonardo\Downloads\SFML-2.4.2\include
-Libs=C:\Users\Leonardo\Downloads\SFML-2.4.2\lib
+Includes="C:\Users\USER\OneDrive - Universidad Tecnologica del Peru\Desktop\juego martes\Videogame-Navecita\SFML-2.4.2\include"
+Libs="C:\Users\USER\OneDrive - Universidad Tecnologica del Peru\Desktop\juego martes\Videogame-Navecita\SFML-2.4.2\lib"
 PrivateResource=
 ResourceIncludes=
 MakeIncludes=
@@ -28,8 +28,8 @@ Folders=
 IncludeVersionInfo=0
 SupportXPThemes=0
 CompilerSet=0
-CompilerSettings=0000000000000000000000000
-UnitCount=3
+CompilerSettings=0000000000000000001000000
+UnitCount=7
 
 [VersionInfo]
 Major=1
@@ -72,6 +72,46 @@ BuildCmd=
 
 [Unit3]
 FileName=Nave.h
+CompileCpp=1
+Folder=
+Compile=1
+Link=1
+Priority=1000
+OverrideBuildCmd=0
+BuildCmd=
+
+[Unit4]
+FileName=Bala.cpp
+CompileCpp=1
+Folder=
+Compile=1
+Link=1
+Priority=1000
+OverrideBuildCmd=0
+BuildCmd=
+
+[Unit5]
+FileName=Bala.h
+CompileCpp=1
+Folder=
+Compile=1
+Link=1
+Priority=1000
+OverrideBuildCmd=0
+BuildCmd=
+
+[Unit6]
+FileName=Enemigo.h
+CompileCpp=1
+Folder=
+Compile=1
+Link=1
+Priority=1000
+OverrideBuildCmd=0
+BuildCmd=
+
+[Unit7]
+FileName=Enemigo.cpp
 CompileCpp=1
 Folder=
 Compile=1
