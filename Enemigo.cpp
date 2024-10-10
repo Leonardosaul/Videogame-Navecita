@@ -1,7 +1,7 @@
 #include "Enemigo.h"
 
-Enemigo::Enemigo(int x, int y,Texture &texture, Vector2f posicionInicial){
-	this->posicionInicial = posicionInicial;
+Enemigo::Enemigo(int x, int y,Texture &texture, Vector2f p){
+	point = p;
 	sprite.setTexture(texture);
 	sprite.setTextureRect(IntRect(point.x,point.y,8,8));
 	sprite.setPosition(x,y);
