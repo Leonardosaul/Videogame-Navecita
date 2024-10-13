@@ -19,22 +19,21 @@ Nivel::Nivel(Texture &texture, RenderWindow &window, Font font)
 void Nivel::initiator() {
     while (window.isOpen()) {
         if (this->currentLevel == 1) {
-            showMessage("Nivel 1"); // Mostrar mensaje de Nivel 1
+            showMessage("Nivel 1");
             if (this->firstLevel()) {
-                showMessage("Nivel 2"); // Mostrar mensaje de Nivel 2 si gana el nivel 1
+                showMessage("Nivel 2");
                 this->currentLevel = 2;
             }
         } else if (this->currentLevel == 2) {
-            showMessage("Nivel 2"); // Mostrar mensaje de Nivel 2
+            showMessage("Nivel 2");
             if (this->secondLevel()) {
-                showMessage("Nivel 3"); // Mostrar mensaje de Nivel 3 si gana el nivel 2
+                showMessage("Nivel 3");
                 this->currentLevel = 3;
             }
         } else if (this->currentLevel == 3) {
-            showMessage("Nivel 3"); // Mostrar mensaje de Nivel 3
+            showMessage("Nivel 3");
             if (this->thirdLevel()) {
-                // Mensaje de finalizado
-                showMessage("¡GANO!"); // O cualquier mensaje de finalización que desees
+                showMessage("¡GANO!");
                 break;
             }
         }
@@ -55,10 +54,8 @@ void Nivel::buildCharacters() {
     float startX = (this->window.getSize().x - totalWidth) / 2;
     float startY = (this->window.getSize().y - totalHeight) / 2;
 
-    
     startY -= 150;
 
-    // Creando enemigos en una matriz 4x8
     for (int i = 0; i < 4; i++) {
         for (int j = 0; j < 8; j++) {
             float x = startX + j * (enemyWidth + spacing);
@@ -103,7 +100,7 @@ bool Nivel::firstLevel() {
             // Verificar colisión con la nave
             if (enemigo.getSprite().getGlobalBounds().intersects(nave.getSprite().getGlobalBounds())) {
                 // Colisión detectada: el jugador pierde
-                std::cout << "¡Perdiste!" << std::endl;
+                cout << "¡Perdiste!" << std::endl;
                 return false;
             }
 
@@ -222,7 +219,7 @@ bool Nivel::secondLevel() {
 
             // Verificar colisión con la nave
             if (enemigo.getSprite().getGlobalBounds().intersects(nave.getSprite().getGlobalBounds())) {
-                std::cout << "¡Perdiste!" << std::endl;
+                cout << "¡Perdiste!" << std::endl;
                 return false;
             }
 
@@ -284,7 +281,7 @@ bool Nivel::secondLevel() {
             } else {
                 // Verificar colisión con la nave
                 if (it->getGlobalBounds().intersects(nave.getSprite().getGlobalBounds())) {
-                    std::cout << "¡Perdiste!" << std::endl;
+                    cout << "¡Perdiste!" << std::endl;
                     return false;
                 } else {
                     ++it; // Solo incrementar si no se eliminó
@@ -364,7 +361,7 @@ bool Nivel::thirdLevel() {
             
             // Verificar colisión con la nave
             if (enemigo.getSprite().getGlobalBounds().intersects(nave.getSprite().getGlobalBounds())) {
-                std::cout << "¡Perdiste!" << std::endl;
+                cout << "¡Perdiste!" << std::endl;
                 return false; 
             }
 
@@ -434,7 +431,7 @@ bool Nivel::thirdLevel() {
             } else {
                 // Verificar colisión con la nave
                 if (it->getGlobalBounds().intersects(nave.getSprite().getGlobalBounds())) {
-                    std::cout << "¡Perdiste!" << std::endl;
+                    cout << "¡Perdiste!" << std::endl;
                     return false;
                 } else {
                     ++it; // Solo incrementar si no se eliminó
