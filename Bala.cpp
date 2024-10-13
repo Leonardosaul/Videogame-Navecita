@@ -17,7 +17,7 @@ void Bala::draw(RenderTarget &rt, RenderStates rs) const {
 }
 
 // Método para obtener la posición exacta de la bala
-Vector2f Bala::getPos() {
+Vector2f Bala::getPos() const {
     return this->sprite.getPosition();
 }
 

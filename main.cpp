@@ -1,10 +1,7 @@
 #include <iostream>
 #include <SFML/Graphics.hpp>
-#include <vector>
 
-#include "Nave.h"
-#include "Bala.h"
-#include "Enemigo.h"
+#include "Nivel.h"
 
 using namespace std;
 using namespace sf;
@@ -15,8 +12,23 @@ int main() {
 
     if (!spritesheet.loadFromFile("Resources/Sprite/spritesheet.png")) {
         cout << "Error al cargar la textura";
+        return -1;
     }
+    
+    Font textFont;
+    if (!textFont.loadFromFile("Resources/Font/SixtyfourConvergence-Regular.ttf")) {
+        std::cerr << "Error cargando la fuente";
+        return -1;
+    }
+    
+    RenderWindow window(VideoMode(600, 600), "Navecita");
+    window.setFramerateLimit(60);
+    
+    Nivel nivel(spritesheet, window, textFont);
+    
+    nivel.initiator();
 
+	/*
     Nave nave(288, 555, spritesheet);
 
     bool balaActiva = false;
@@ -44,10 +56,7 @@ int main() {
             enemigo[i][j] = Enemigo(j * 30 + 24, i * 30 + 24, spritesheet, sectionSpritesheet);
         }
     }
-
-    RenderWindow window(VideoMode(600, 600), "Navecita");
-    window.setFramerateLimit(60);
-
+    
     while (window.isOpen()) {
         Event event;
 
@@ -131,6 +140,7 @@ int main() {
 
         window.display();
     }
+    */
 
     return 0;
 }

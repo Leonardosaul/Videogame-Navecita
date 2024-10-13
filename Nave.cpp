@@ -1,5 +1,9 @@
 #include "Nave.h"
 
+Nave::Nave() {
+	
+}
+
 Nave::Nave(int x, int y, Texture &texture) {
 	this->sprite.setTexture(texture);
 	this->sprite.setTextureRect(IntRect(13*8+8, 7*8+7, 16, 8));
@@ -45,4 +49,8 @@ bool Nave::disparo() {
 
 Vector2f Nave::posicion() {
 	return this->sprite.getPosition();
+}
+
+Sprite& Nave::getSprite() {
+	return this->sprite;
 }

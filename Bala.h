@@ -1,3 +1,6 @@
+#ifndef BALA_H
+#define BALA_H
+
 #include <SFML/Graphics.hpp>
 #include <iostream>
 
@@ -13,5 +16,7 @@ class Bala : public Drawable {
         virtual void draw(RenderTarget &rt, RenderStates rs) const;
         void update();
         FloatRect getGlobalBounds();  // Para colisiones
-        Vector2f getPos();            // Para obtener la posición
+        Vector2f getPos() const;            // Para obtener la posición
 };
+
+#endif

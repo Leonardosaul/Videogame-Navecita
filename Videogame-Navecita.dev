@@ -4,8 +4,8 @@ Name=Videogame-Navecita
 Type=0
 Ver=2
 ObjFiles=
-Includes="C:\Users\USER\OneDrive - Universidad Tecnologica del Peru\Desktop\juego martes\Videogame-Navecita\SFML-2.4.2\include"
-Libs="C:\Users\USER\OneDrive - Universidad Tecnologica del Peru\Desktop\juego martes\Videogame-Navecita\SFML-2.4.2\lib"
+Includes="C:\Users\USER\OneDrive - Universidad Tecnologica del Peru\Desktop\juego martes\Videogame-Navecita\SFML-2.4.2\include";C:\Users\Leonardo\Desktop\Videogame-Navecita\SFML-2.4.2\include
+Libs="C:\Users\USER\OneDrive - Universidad Tecnologica del Peru\Desktop\juego martes\Videogame-Navecita\SFML-2.4.2\lib";C:\Users\Leonardo\Desktop\Videogame-Navecita\SFML-2.4.2\lib
 PrivateResource=
 ResourceIncludes=
 MakeIncludes=
@@ -29,7 +29,7 @@ IncludeVersionInfo=0
 SupportXPThemes=0
 CompilerSet=0
 CompilerSettings=0000000000000000001000000
-UnitCount=7
+UnitCount=9
 
 [VersionInfo]
 Major=1
@@ -112,6 +112,26 @@ BuildCmd=
 
 [Unit7]
 FileName=Enemigo.cpp
+CompileCpp=1
+Folder=
+Compile=1
+Link=1
+Priority=1000
+OverrideBuildCmd=0
+BuildCmd=
+
+[Unit8]
+FileName=Nivel.h
+CompileCpp=1
+Folder=
+Compile=1
+Link=1
+Priority=1000
+OverrideBuildCmd=0
+BuildCmd=
+
+[Unit9]
+FileName=Nivel.cpp
 CompileCpp=1
 Folder=
 Compile=1
