@@ -26,6 +26,7 @@ class Nivel {
 		bool firstLevel();
 		bool secondLevel();
 		bool thirdLevel();
+		void showMessage(const string& message);
 	public:
 		Nivel(Texture &texture, RenderWindow &window, Font font);
 		void initiator();
