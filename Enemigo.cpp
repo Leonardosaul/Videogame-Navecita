@@ -29,7 +29,7 @@ void Enemigo::ChangeDirAll(std::vector<Bala> &balasEnemigos, Texture &texture) {
     sprite.move(0, 10);
 
     // Dispara una bala al cambiar de dirección
-    balasEnemigos.push_back(Bala(sprite.getPosition().x + 16, sprite.getPosition().y + 24, texture, IntRect(13 * 8 + 16, 6 * 8 + 6, 8, 8), 5));
+    balasEnemigos.push_back(Bala(sprite.getPosition().x + 16, sprite.getPosition().y + 24, texture, IntRect(13*8+8,8*2+2,8,8), 5));
 }
 
 // Devuelve la posición del enemigo
@@ -76,7 +76,7 @@ void Enemigo::ChangeDirIfLastRow(std::vector<Enemigo>& enemigos, std::vector<Bal
     for (size_t i = lastRowStart; i < lastRowEnd; ++i) {
         if (i < totalEnemies && !enemigos[i].hasShot()) {  // Comprobar si no ha disparado
             balasEnemigos.push_back(Bala(enemigos[i].Pos().x + 16, enemigos[i].Pos().y + 24, texture,
-                                          IntRect(13 * 8 + 16, 6 * 8 + 6, 8, 8), 5));
+                                          IntRect(13*8+8,8*2+2,8,8), 5));
             enemigos[i].setShot(true);  // Marcar como disparado
         }
     }
